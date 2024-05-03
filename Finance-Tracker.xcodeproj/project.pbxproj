@@ -15,6 +15,15 @@
 		CC73B6F02BE5261700CA666F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6EF2BE5261700CA666F /* Constants.swift */; };
 		CC73B6F22BE52B8800CA666F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6F12BE52B8800CA666F /* Tab.swift */; };
 		CC73B6F42BE52F5E00CA666F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6F32BE52F5E00CA666F /* Category.swift */; };
+		CC73B6F62BE5305A00CA666F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6F52BE5305A00CA666F /* Transaction.swift */; };
+		CC73B6F82BE5310100CA666F /* TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6F72BE5310100CA666F /* TintColor.swift */; };
+		CC73B6FB2BE5332B00CA666F /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6FA2BE5332B00CA666F /* Recents.swift */; };
+		CC73B6FD2BE5334400CA666F /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6FC2BE5334400CA666F /* Search.swift */; };
+		CC73B6FF2BE5335900CA666F /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6FE2BE5335900CA666F /* Graphs.swift */; };
+		CC73B7012BE5336300CA666F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B7002BE5336300CA666F /* Settings.swift */; };
+		CC73B7032BE5388E00CA666F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B7022BE5388E00CA666F /* View+Extensions.swift */; };
+		CC73B7052BE53FAE00CA666F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B7042BE53FAE00CA666F /* Date+Extensions.swift */; };
+		CC7A0DF92BE545EC001D71FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A0DF82BE545EC001D71FE /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		CC73B6EF2BE5261700CA666F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC73B6F12BE52B8800CA666F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		CC73B6F32BE52F5E00CA666F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CC73B6F52BE5305A00CA666F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		CC73B6F72BE5310100CA666F /* TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColor.swift; sourceTree = "<group>"; };
+		CC73B6FA2BE5332B00CA666F /* Recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recents.swift; sourceTree = "<group>"; };
+		CC73B6FC2BE5334400CA666F /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		CC73B6FE2BE5335900CA666F /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
+		CC73B7002BE5336300CA666F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CC73B7022BE5388E00CA666F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		CC73B7042BE53FAE00CA666F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		CC7A0DF82BE545EC001D71FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,8 @@
 			children = (
 				CC73B6F12BE52B8800CA666F /* Tab.swift */,
 				CC73B6F32BE52F5E00CA666F /* Category.swift */,
+				CC73B6F52BE5305A00CA666F /* Transaction.swift */,
+				CC73B6F72BE5310100CA666F /* TintColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +110,8 @@
 		CC73B6EB2BE5232000CA666F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC7A0DF72BE545DB001D71FE /* Helpers */,
+				CC73B6F92BE5331500CA666F /* TabViews */,
 				CC73B6EC2BE5234D00CA666F /* IntroScreen.swift */,
 			);
 			path = View;
@@ -99,6 +121,27 @@
 			isa = PBXGroup;
 			children = (
 				CC73B6EF2BE5261700CA666F /* Constants.swift */,
+				CC73B7022BE5388E00CA666F /* View+Extensions.swift */,
+				CC73B7042BE53FAE00CA666F /* Date+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CC73B6F92BE5331500CA666F /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				CC73B6FA2BE5332B00CA666F /* Recents.swift */,
+				CC73B6FC2BE5334400CA666F /* Search.swift */,
+				CC73B6FE2BE5335900CA666F /* Graphs.swift */,
+				CC73B7002BE5336300CA666F /* Settings.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		CC7A0DF72BE545DB001D71FE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A0DF82BE545EC001D71FE /* CardView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,11 +216,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC73B6F82BE5310100CA666F /* TintColor.swift in Sources */,
+				CC73B6FB2BE5332B00CA666F /* Recents.swift in Sources */,
+				CC73B6F62BE5305A00CA666F /* Transaction.swift in Sources */,
 				CC73B6DF2BE522AB00CA666F /* ContentView.swift in Sources */,
+				CC7A0DF92BE545EC001D71FE /* CardView.swift in Sources */,
 				CC73B6ED2BE5234D00CA666F /* IntroScreen.swift in Sources */,
 				CC73B6F22BE52B8800CA666F /* Tab.swift in Sources */,
+				CC73B7012BE5336300CA666F /* Settings.swift in Sources */,
 				CC73B6DD2BE522AB00CA666F /* Finance_TrackerApp.swift in Sources */,
+				CC73B6FD2BE5334400CA666F /* Search.swift in Sources */,
+				CC73B7052BE53FAE00CA666F /* Date+Extensions.swift in Sources */,
+				CC73B7032BE5388E00CA666F /* View+Extensions.swift in Sources */,
 				CC73B6F02BE5261700CA666F /* Constants.swift in Sources */,
+				CC73B6FF2BE5335900CA666F /* Graphs.swift in Sources */,
 				CC73B6F42BE52F5E00CA666F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
