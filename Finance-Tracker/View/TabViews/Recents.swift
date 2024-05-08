@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Recents: View {
     /// User Properties
@@ -13,6 +14,10 @@ struct Recents: View {
     /// View Properties
     @State private var startDate: Date = .now.startOfMounth
     @State private var endDate: Date = .now.endOfMounth
+    @State private var showFilterView: Bool = false
+    @State private var selectedCategory: Category = .expense
+    /// For Animation
+    @Namespace private var animation
     var body: some View {
         GeometryReader {
             /// for animation purpose
@@ -23,17 +28,33 @@ struct Recents: View {
                     LazyVStack(spacing: 10, pinnedViews: [.sectionFooters]) {
                         Section {
                             /// Date FIlter Button
-                            Button(action: {}, label: {
+                            Button(action: {
+                                showFilterView = true
+                            }, label: {
                                 Text("\(format(date: startDate,format: "dd - MMM yy")) to \(format(date: endDate,format: "dd - MMM yy"))")
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
                             })
                             .hSpacing(.leading)
                             
-                            /// Card View
-                            CardView(income: 2039, expense: 4098)
-                            
-                            /// Custom Segmented Control
+                            FilterTransactionsView(startDate: startDate, endDate: endDate) { transactions in
+                                /// Card View
+                                CardView(
+                                     income: total(transactions, category: .income),
+                                    expense: total(transactions, category: .expense)
+                                )
+                                
+                                /// Custom Segmented Control
+                                CustomSegmentControl()
+                                    .padding(.bottom, 10)
+                                
+                                ForEach(transactions.filter({ $0.category == selectedCategory.rawValue  })) { transaction in
+                                    NavigationLink(value: transaction) {
+                                        TransactionCardView(transaction: transaction)
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
                         } header: {
                             HeaderView(size)
                         }
@@ -41,7 +62,26 @@ struct Recents: View {
                     .padding(15)
                 }
                 .background(.gray.opacity(0.15))
+                .blur(radius: showFilterView ? 8 : 0)
+                .disabled(showFilterView)
+                .navigationDestination(for: Transaction.self) { transaction in
+                    TransactionView(editTransaction: transaction)
+                }
             }
+            .overlay {
+                if showFilterView {
+                    DateFilterView(start: startDate, end: endDate, onSubmit: { start,
+                        end in
+                        startDate = start
+                        endDate = end
+                        showFilterView = false
+                    }, onClose: {
+                        showFilterView = false
+                    })
+                    .transition(.move(edge: .leading))
+                }
+            }
+            .animation(.snappy, value: showFilterView)
         }
     }
     
@@ -50,7 +90,7 @@ struct Recents: View {
     func HeaderView(_ size: CGSize) -> some View {
         HStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 5, content: {
-                Text("Welcome!")
+                Text("Привет!")
                     .font(.title.bold())
                 
                 if !userName.isEmpty {
@@ -67,7 +107,7 @@ struct Recents: View {
             Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
             
             NavigationLink {
-                
+                TransactionView()
             } label: {
                 Image(systemName: "plus")
                     .font(.title3)
@@ -95,6 +135,33 @@ struct Recents: View {
         }
     }
     
+    /// Segment Control
+    @ViewBuilder
+    func CustomSegmentControl() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Text(category.rawValue)
+                    .hSpacing()
+                    .padding(.vertical, 10)
+                    .background {
+                        if category == selectedCategory {
+                            Capsule()
+                                .fill(.background)
+                                .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                        }
+                    }
+                    .contentShape(.capsule)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            selectedCategory = category
+                        }
+                    }
+            }
+        }
+        .background(.gray.opacity(0.15), in: .capsule)
+        .padding(.top, 5)
+    }
+
     func headerBGOpacity(_ proxy: GeometryProxy) -> CGFloat {
         let minY = proxy.frame(in: .scrollView).minY + safeArea.top
         return minY > 0 ? 0 : (-minY / 15)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0708CF2BE64DDE00D5DD25 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0708CE2BE64DDE00D5DD25 /* TransactionCardView.swift */; };
+		CC6443FF2BEC03E2006A325C /* FilterTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6443FE2BEC03E2006A325C /* FilterTransactionsView.swift */; };
 		CC73B6DD2BE522AB00CA666F /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6DC2BE522AB00CA666F /* Finance_TrackerApp.swift */; };
 		CC73B6DF2BE522AB00CA666F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6DE2BE522AB00CA666F /* ContentView.swift */; };
 		CC73B6E12BE522AC00CA666F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC73B6E02BE522AC00CA666F /* Assets.xcassets */; };
@@ -24,9 +26,14 @@
 		CC73B7032BE5388E00CA666F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B7022BE5388E00CA666F /* View+Extensions.swift */; };
 		CC73B7052BE53FAE00CA666F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B7042BE53FAE00CA666F /* Date+Extensions.swift */; };
 		CC7A0DF92BE545EC001D71FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A0DF82BE545EC001D71FE /* CardView.swift */; };
+		CCEBA6662BEB8A1000FFE6CA /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBA6652BEB8A1000FFE6CA /* SwipeAction.swift */; };
+		CCEBA6682BEB8F5500FFE6CA /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBA6672BEB8F5500FFE6CA /* DateFilterView.swift */; };
+		CCEBA66A2BEBA23800FFE6CA /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBA6692BEBA23800FFE6CA /* TransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0708CE2BE64DDE00D5DD25 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		CC6443FE2BEC03E2006A325C /* FilterTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionsView.swift; sourceTree = "<group>"; };
 		CC73B6D92BE522AB00CA666F /* Finance-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC73B6DC2BE522AB00CA666F /* Finance_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerApp.swift; sourceTree = "<group>"; };
 		CC73B6DE2BE522AB00CA666F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +52,9 @@
 		CC73B7022BE5388E00CA666F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		CC73B7042BE53FAE00CA666F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		CC7A0DF82BE545EC001D71FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CCEBA6652BEB8A1000FFE6CA /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		CCEBA6672BEB8F5500FFE6CA /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
+		CCEBA6692BEBA23800FFE6CA /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,7 @@
 				CC7A0DF72BE545DB001D71FE /* Helpers */,
 				CC73B6F92BE5331500CA666F /* TabViews */,
 				CC73B6EC2BE5234D00CA666F /* IntroScreen.swift */,
+				CCEBA6692BEBA23800FFE6CA /* TransactionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				CC7A0DF82BE545EC001D71FE /* CardView.swift */,
+				CC0708CE2BE64DDE00D5DD25 /* TransactionCardView.swift */,
+				CCEBA6652BEB8A1000FFE6CA /* SwipeAction.swift */,
+				CCEBA6672BEB8F5500FFE6CA /* DateFilterView.swift */,
+				CC6443FE2BEC03E2006A325C /* FilterTransactionsView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -218,19 +233,24 @@
 			files = (
 				CC73B6F82BE5310100CA666F /* TintColor.swift in Sources */,
 				CC73B6FB2BE5332B00CA666F /* Recents.swift in Sources */,
+				CCEBA6682BEB8F5500FFE6CA /* DateFilterView.swift in Sources */,
 				CC73B6F62BE5305A00CA666F /* Transaction.swift in Sources */,
 				CC73B6DF2BE522AB00CA666F /* ContentView.swift in Sources */,
 				CC7A0DF92BE545EC001D71FE /* CardView.swift in Sources */,
 				CC73B6ED2BE5234D00CA666F /* IntroScreen.swift in Sources */,
 				CC73B6F22BE52B8800CA666F /* Tab.swift in Sources */,
 				CC73B7012BE5336300CA666F /* Settings.swift in Sources */,
+				CC6443FF2BEC03E2006A325C /* FilterTransactionsView.swift in Sources */,
 				CC73B6DD2BE522AB00CA666F /* Finance_TrackerApp.swift in Sources */,
 				CC73B6FD2BE5334400CA666F /* Search.swift in Sources */,
+				CCEBA66A2BEBA23800FFE6CA /* TransactionView.swift in Sources */,
 				CC73B7052BE53FAE00CA666F /* Date+Extensions.swift in Sources */,
 				CC73B7032BE5388E00CA666F /* View+Extensions.swift in Sources */,
 				CC73B6F02BE5261700CA666F /* Constants.swift in Sources */,
 				CC73B6FF2BE5335900CA666F /* Graphs.swift in Sources */,
+				CCEBA6662BEB8A1000FFE6CA /* SwipeAction.swift in Sources */,
 				CC73B6F42BE52F5E00CA666F /* Category.swift in Sources */,
+				CC0708CF2BE64DDE00D5DD25 /* TransactionCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
