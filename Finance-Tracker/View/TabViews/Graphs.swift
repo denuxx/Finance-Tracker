@@ -145,9 +145,12 @@ struct ListOfExpenses: View {
                 Section {
                     FilterTransactionsView(startDate: month.startOfMounth, endDate: month.endOfMounth, category: .income) { transactions in
                         ForEach(transactions) { transaction in
-                            NavigationLink(value: transaction) {
+                            NavigationLink {
+                                TransactionView(editTransaction: transaction)
+                            } label: {
                                 TransactionCardView(transaction: transaction)
                             }
+                            .buttonStyle(.plain)
                         }
                     }
                 } header: {
@@ -160,7 +163,9 @@ struct ListOfExpenses: View {
                 Section {
                     FilterTransactionsView(startDate: month.startOfMounth, endDate: month.endOfMounth, category: .expense) { transactions in
                         ForEach(transactions) { transaction in
-                            NavigationLink(value: transaction) {
+                            NavigationLink {
+                                TransactionView(editTransaction: transaction)
+                            } label: {
                                 TransactionCardView(transaction: transaction)
                             }
                             .buttonStyle(.plain)
@@ -177,9 +182,6 @@ struct ListOfExpenses: View {
         }
         .background(.gray.opacity(0.15))
         .navigationTitle(format(date: month, format: "MMM yy"))
-        .navigationDestination(for: Transaction.self) { transaction in
-            TransactionView(editTransaction: transaction)
-        }
     }
 }
 
