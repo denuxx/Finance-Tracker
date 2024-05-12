@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC0708CF2BE64DDE00D5DD25 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0708CE2BE64DDE00D5DD25 /* TransactionCardView.swift */; };
 		CC6443FF2BEC03E2006A325C /* FilterTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6443FE2BEC03E2006A325C /* FilterTransactionsView.swift */; };
+		CC6444012BECB856006A325C /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6444002BECB856006A325C /* ChartModel.swift */; };
 		CC73B6DD2BE522AB00CA666F /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6DC2BE522AB00CA666F /* Finance_TrackerApp.swift */; };
 		CC73B6DF2BE522AB00CA666F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73B6DE2BE522AB00CA666F /* ContentView.swift */; };
 		CC73B6E12BE522AC00CA666F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC73B6E02BE522AC00CA666F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		CC0708CE2BE64DDE00D5DD25 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		CC6443FE2BEC03E2006A325C /* FilterTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionsView.swift; sourceTree = "<group>"; };
+		CC6444002BECB856006A325C /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		CC73B6D92BE522AB00CA666F /* Finance-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC73B6DC2BE522AB00CA666F /* Finance_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerApp.swift; sourceTree = "<group>"; };
 		CC73B6DE2BE522AB00CA666F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				CC73B6F32BE52F5E00CA666F /* Category.swift */,
 				CC73B6F52BE5305A00CA666F /* Transaction.swift */,
 				CC73B6F72BE5310100CA666F /* TintColor.swift */,
+				CC6444002BECB856006A325C /* ChartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				CC73B6F22BE52B8800CA666F /* Tab.swift in Sources */,
 				CC73B7012BE5336300CA666F /* Settings.swift in Sources */,
 				CC6443FF2BEC03E2006A325C /* FilterTransactionsView.swift in Sources */,
+				CC6444012BECB856006A325C /* ChartModel.swift in Sources */,
 				CC73B6DD2BE522AB00CA666F /* Finance_TrackerApp.swift in Sources */,
 				CC73B6FD2BE5334400CA666F /* Search.swift in Sources */,
 				CCEBA66A2BEBA23800FFE6CA /* TransactionView.swift in Sources */,

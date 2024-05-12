@@ -41,12 +41,12 @@ struct FilterTransactionsView<Content: View>: View {
         self.content = content
     }
     
-    init(stratDate: Date, endDate: Date, category: Category?, @ViewBuilder content: @escaping ([Transaction]) -> Content) {
+    init(startDate: Date, endDate: Date, category: Category?, @ViewBuilder content: @escaping ([Transaction]) -> Content) {
         /// Custom Predicate
         
         let rawValue = category?.rawValue ?? ""
         let predicate = #Predicate<Transaction> { transaction in
-            return transaction.dateAdded >= stratDate && transaction.dateAdded <= endDate && (rawValue.isEmpty ? true : transaction.category == rawValue)
+            return transaction.dateAdded >= startDate && transaction.dateAdded <= endDate && (rawValue.isEmpty ? true : transaction.category == rawValue)
         }
         
         _transactions = Query(filter: predicate, sort: [
